@@ -2,6 +2,8 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
+![SUMO Simulation of Shinjuku](docsimages/simulation-demo.png)
+
 ##  Abstract
 
 This project introduces **HERO (Heuristic Emergency Response Optimizer)**, an advanced simulation and optimization system designed to minimize emergency response times in urban environments. Leveraging a multi-agent reinforcement learning (MARL) approach, HERO trains a fleet of emergency vehicles to learn a cooperative dispatch and positioning strategy. The system operates within a high-fidelity traffic simulation built with SUMO and real-world map data from OpenStreetMap.
