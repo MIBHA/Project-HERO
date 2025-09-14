@@ -2,10 +2,6 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-![SUMO Simulation of Shinjuku](docs/images/simulation-demo.png)
-
-![Performed steps](docs/images/Phase1.jpg)
-
 ## 📖 Abstract
 
 This project introduces **HERO (Heuristic Emergency Response Optimizer)...**
