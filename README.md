@@ -2,7 +2,7 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-![Performed steps](docs/images/Phase1.jpg)
+![Performed steps](doc/images/Phase1.jpg)
 
 ![SUMO Simulation of Shinjuku](docsimages/simulation-demo.png)
 
