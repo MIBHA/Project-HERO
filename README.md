@@ -1,8 +1,8 @@
 # Project HERO (Heuristic Emergency Response Optimizer)
 
-[![License: MIT](https.img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-## 📖 Abstract
+##  Abstract
 
 This project introduces **HERO (Heuristic Emergency Response Optimizer)**, an advanced simulation and optimization system designed to minimize emergency response times in urban environments. Leveraging a multi-agent reinforcement learning (MARL) approach, HERO trains a fleet of emergency vehicles to learn a cooperative dispatch and positioning strategy. The system operates within a high-fidelity traffic simulation built with SUMO and real-world map data from OpenStreetMap.
 
@@ -10,7 +10,7 @@ The primary problem addressed is the inefficiency of traditional, static dispatc
 
 ---
 
-## 🎯 Introduction
+##  Introduction
 
 ### Background
 In densely populated urban areas, every second counts during a medical emergency or crisis. The effectiveness of emergency response services is heavily dependent on their ability to reach an incident location as quickly as possible. However, existing dispatch systems often rely on simple heuristics, such as assigning the geographically closest unit. This simplistic approach is often suboptimal, as it fails to consider dynamic variables like unpredictable traffic patterns, the availability of other units, or the likelihood of future incidents in nearby areas. This can lead to delayed arrivals and potentially tragic outcomes.
@@ -27,7 +27,7 @@ The primary objectives of this project are:
 
 ---
 
-## 🛠️ Tech Stack
+##  Tech Stack
 
 * **Simulation:** SUMO (Simulation of Urban MObility)
 * **Core Language:** Python
@@ -37,7 +37,7 @@ The primary objectives of this project are:
 
 ---
 
-## 🚀 Getting Started
+##  Getting Started
 
 ### Prerequisites
 * Python 3.8+
@@ -62,7 +62,7 @@ python src/run_simulation.py
 
 ---
 
-## 📂 Project Structure
+##  Project Structure
 
 ```
 Project-HERO/
