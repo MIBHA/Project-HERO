@@ -1,81 +1,55 @@
-# Project HERO (Heuristic Emergency Response Optimizer)
+# Project HERO - Phase 1: Simulation Environment
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+**Status:** `Completed`  
+**Date:** September 19, 2025
 
 ![SUMO Simulation of Shinjuku](docsimages/simulation-demo.png)
+---
+## Phase 1 Overview
 
-##  Abstract
+This branch contains the completed work for the foundational phase of Project HERO. The primary goal was to construct a high-fidelity, controllable urban simulation environment. This serves as the "digital twin" of a city where our AI agents will eventually operate.
 
-This project introduces **HERO (Heuristic Emergency Response Optimizer)**, an advanced simulation and optimization system designed to minimize emergency response times in urban environments. Leveraging a multi-agent reinforcement learning (MARL) approach, HERO trains a fleet of emergency vehicles to learn a cooperative dispatch and positioning strategy. The system operates within a high-fidelity traffic simulation built with SUMO and real-world map data from OpenStreetMap.
+## ✅ Key Accomplishments
 
-The primary problem addressed is the inefficiency of traditional, static dispatch systems, which often fail to account for dynamic factors like real-time traffic and predicted incident hotspots. By creating intelligent, adaptive agents, Project HERO demonstrates a significant improvement in response logistics, directly contributing to the "golden hour" of emergency care and ultimately aiming to save more lives.
+* **Built a Realistic Road Network:** Successfully processed real-world map data from **OpenStreetMap** for Shinjuku, Japan, and converted it into a traffic-routable network using the **SUMO `netconvert`** tool.
+
+* **Established a Controllable Simulation:** Created a complete simulation instance that can be launched, viewed, and managed. Generated random traffic to validate the network's integrity.
+
+* **Developed a Python Control Interface:** Established a bridge between Python and the SUMO simulation using the **Traci library**. This allows for programmatic control of the simulation, which is essential for the future AI implementation.
+
+* **Professional Git Workflow:** Set up the project repository on GitHub and utilized a **feature-branching workflow** (`phase-1-simulation-environment`) to manage development.
 
 ---
+## 🛠️ Technologies Used in This Phase
 
-##  Introduction
-
-### Background
-In densely populated urban areas, every second counts during a medical emergency or crisis. The effectiveness of emergency response services is heavily dependent on their ability to reach an incident location as quickly as possible. However, existing dispatch systems often rely on simple heuristics, such as assigning the geographically closest unit. This simplistic approach is often suboptimal, as it fails to consider dynamic variables like unpredictable traffic patterns, the availability of other units, or the likelihood of future incidents in nearby areas. This can lead to delayed arrivals and potentially tragic outcomes.
-
-### Motivation
-The motivation for Project HERO stems from the potential of modern AI to solve complex, real-world logistical challenges with a significant social impact. The recent advancements in Multi-Agent Reinforcement Learning (MARL) provide a powerful new toolkit for training independent agents to learn complex, cooperative strategies that surpass human-programmed heuristics. This project was built to explore and demonstrate the tangible application of these advanced AI techniques to create a smarter, faster, and more efficient emergency response network.
-
-### Objectives
-The primary objectives of this project are:
-1.  **Build** a realistic, dynamic simulation of an urban environment using SUMO and real-world geospatial data.
-2.  **Develop** a predictive model that can identify incident hotspots based on historical and contextual data.
-3.  **Implement** and train a multi-agent reinforcement learning system where AI agents, representing emergency vehicles, learn an optimal dispatch policy.
-4.  **Benchmark** the performance of the trained MARL agents against traditional dispatch methods and demonstrate a quantifiable reduction in average response times.
-
----
-
-##  Tech Stack
-
-* **Simulation:** SUMO (Simulation of Urban MObility)
-* **Core Language:** Python
-* **AI/ML Libraries:** Ray RLlib, Stable Baselines3, Scikit-learn, Pandas
+* **Simulation Engine:** SUMO (Simulation of Urban MObility)
 * **Geospatial Data:** OpenStreetMap
-* **Python-Simulation Bridge:** Traci
+* **Core Language:** Python
+* **Simulation Bridge:** Traci
+* **Version Control:** Git & GitHub
 
----
+## 🚀 How to Run the Phase 1 Demo
 
-##  Getting Started
-
-### Prerequisites
-* Python 3.8+
-* SUMO installed and accessible from the command line. (Follow [SUMO Installation Guide](https://sumo.dlr.de/docs/Installing.html))
-
-### Installation
-1.  Clone the repository:
+1.  **Prerequisites:** Ensure you have **Python** and **SUMO** installed.
+2.  **Clone the Repository:**
     ```bash
-    git clone [https://github.com/YourUsername/Project-HERO.git](https://github.com/YourUsername/Project-HERO.git)
+    git clone [https://github.com/MIBHA/Project-HERO.git](https://github.com/MIBHA/Project-HERO.git)
     cd Project-HERO
     ```
-2.  Install the required Python packages:
+3.  **Switch to the Phase 1 Branch:**
     ```bash
-    pip install -r requirements.txt
+    git checkout phase-1-simulation-environment
     ```
+4.  **Launch the Simulation:**
+    ```bash
+    sumo-gui -c simulation_files/config.sumocfg
+    ```
+    This will open the SUMO GUI, and you can press the "Play" button to see the random traffic simulation of Shinjuku. 
 
-### Usage
-To run a simulation, execute the main script from the `src` directory:
-```bash
-python src/run_simulation.py
-```
+## 📂 Key Files Created
 
----
-
-##  Project Structure
-
-```
-Project-HERO/
-├── data/                  # Datasets for incident prediction
-├── notebooks/             # Jupyter notebooks for analysis and experimentation
-├── simulation_files/      # SUMO map, network, and configuration files
-├── src/                   # All source code
-│   ├── agents/            # RL agent definitions
-│   ├── environment.py     # The custom simulation environment
-│   └── run_simulation.py  # Main script to run the simulation
-├── .gitignore
-├── README.md
-└── requirements.txt
+* `simulation_files/map.osm`: The raw map data downloaded from OpenStreetMap.
+* `simulation_files/map.net.xml`: The converted, usable SUMO road network.
+* `simulation_files/trips.trips.xml`: The file containing the randomly generated test traffic.
+* `simulation_files/config.sumocfg`: The main configuration file that brings the network and traffic together.
 
