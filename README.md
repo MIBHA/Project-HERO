@@ -1,5 +1,7 @@
 # Project HERO (Heuristic Emergency Response Optimizer)
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 ## 📖 Description
 * An **AI-powered optimization system** designed to minimize emergency response times in complex urban environments.
 * Uses **Multi-Agent Reinforcement Learning (MARL)** to train a fleet of emergency vehicles for cooperative dispatch.
