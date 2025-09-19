@@ -35,10 +35,13 @@
 ## 📂 Project Structure
 ```
 Project-HERO/
-├── data/              # Datasets for incident prediction
-├── doc/images/        # Project images and screenshots
-├── notebooks/         # Jupyter notebooks for analysis
-├── simulation_files/  # SUMO map and configuration files
-├── src/               # All Python source code
-└── README.md
-```
+├── data/                  # Datasets for incident prediction
+├── notebooks/             # Jupyter notebooks for analysis and experimentation
+├── simulation_files/      # SUMO map, network, and configuration files
+├── src/                   # All source code
+│   ├── agents/            # RL agent definitions
+│   ├── environment.py     # The custom simulation environment
+│   └── run_simulation.py  # Main script to run the simulation
+├── .gitignore
+├── README.md
+└── requirements.txt
